@@ -1,0 +1,7 @@
+{
+    "baseUrl": "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/",
+    "env": {
+        "login": "login",
+        "customer": "customer"
+    }
+}
