@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import Pantalla_Inicial_Page from '../pagesObjects/Pantalla_Inicial_Page'
+import Customer_Page from '../pagesObjects/Customer_Page'
+
+const pantalla_inicial = new Pantalla_Inicial_Page()
+const customer = new Customer_Page()
+
+Cypress.Commands.add('cuentaDeposit', (cuenta) =>{
+    pantalla_inicial.seleccionarOpcion(cuenta)
+        customer.botonLogin().click()
+        cy.wait(1000);
+        customer.botonDeposit().click()
+})

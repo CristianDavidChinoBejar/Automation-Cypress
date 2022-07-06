@@ -2,6 +2,10 @@
     "baseUrl": "https://www.globalsqa.com/angularJs-protractor/BankingProject/#/",
     "env": {
         "login": "login",
-        "customer": "customer"
+        "customer": "customer",
+        "account": "account",
+        "listTx": "listTx",
+        "manager": "manager",
+        "openAccount": "openAccount"
     }
 }
