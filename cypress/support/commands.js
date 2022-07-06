@@ -35,3 +35,23 @@ Cypress.Commands.add('cuentaDeposit', (cuenta) =>{
         cy.wait(1000);
         customer.botonDeposit().click()
 })
+
+Cypress.Commands.add('cuentaWithdrawl', (cuenta) =>{
+    pantalla_inicial.seleccionarOpcion(cuenta)
+        customer.botonLogin().click()
+        cy.wait(1000);
+        customer.botonWithdrawl().click()
+})
+
+Cypress.Commands.add('redireccionCustomerLogin', () =>{
+    pantalla_inicial.botonHome()
+        .should('have.text','Home').click()
+    
+    cy.get('button').contains('Customer Login')
+        .should('have.text','Customer Login').click()
+    
+    cy.url().should(
+        'be.equal',
+        `${Cypress.config("baseUrl")}customer`
+    )
+})

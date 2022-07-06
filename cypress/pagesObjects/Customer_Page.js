@@ -1,5 +1,4 @@
 export default class Customer_Page {
-
     elements = {
         inputForm: () => cy.get('.form-control')
     }

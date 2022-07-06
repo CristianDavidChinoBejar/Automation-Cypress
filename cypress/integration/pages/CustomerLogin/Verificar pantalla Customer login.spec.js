@@ -5,8 +5,8 @@ import Customer_Page from '../../../pagesObjects/Customer_Page'
 describe('Funcional - Verificar pantalla Customer login', () => {
     const customer = new Customer_Page()
     beforeEach(()=>{
-        // cy.clearCookies()
-        // cy.clearLocalStorage()
+        cy.clearCookies()
+        cy.clearLocalStorage()
         cy.visit(Cypress.env("customer"))
     })
 

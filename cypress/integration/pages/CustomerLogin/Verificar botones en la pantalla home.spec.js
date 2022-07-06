@@ -6,8 +6,8 @@ describe('Funcional - Verificar botones en la pantalla Home', () => {
     const pantalla_inicial = new Pantalla_Inicial_Page()
 
     beforeEach(()=>{
-        // cy.clearCookies()
-        // cy.clearLocalStorage()
+        cy.clearCookies()
+        cy.clearLocalStorage()
         cy.visit(Cypress.env("login"))
     })
     

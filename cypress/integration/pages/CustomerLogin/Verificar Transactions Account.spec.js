@@ -88,7 +88,7 @@ describe('Funcional - Transactions Account', () => {
         cy.visit(Cypress.env("customer"))
         cy.get('select').select(1)
         customer.botonLogin().click()
-        cy.wait(500);
+        cy.wait(1000);
         customer.botonTransactions().click()
 
         cy.url().should(

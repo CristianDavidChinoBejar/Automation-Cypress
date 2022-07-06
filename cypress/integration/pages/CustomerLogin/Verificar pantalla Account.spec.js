@@ -47,7 +47,6 @@ describe('Funcional - Verificar pantalla Account', () => {
         customer.botonLogin().click()
 
         cy.get('[id=accountSelect]').find('option').each(($opciones, i)=>{
-            console.log($opciones[0].text, i);
             cy.get('select').select($opciones[0].text)
             customer.accountNumberInfo().should('include.text', $opciones[0].text)
         })
